@@ -1,0 +1,41 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin linx ($link, $visit, $hover, $active) {
+    
+        color: $link;
+        &:visited {
+            color: $visit;
+        }
+        &:hover {
+            color: $hover;            
+        }
+        &:active {
+            color: $active;
+        }
+    
+}
+
+@mixin button($color,$bgcolor) {
+    color: $color;
+    background: $bgcolor;
+    border: none;
+    @include border-radius(3px);
+    font-weight: bold;
+    padding: 10px 25px;
+    @media screen and (max-width: $break-small-max) {
+        padding: 5px;
+    }
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}

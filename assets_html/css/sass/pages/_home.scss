@@ -1,0 +1,69 @@
+section.carousel-wrapper {	
+	.item {
+		> img {
+			width: 100%;			
+		}
+		.banner-highlights {
+			position: absolute;
+			bottom: 20%;
+			width: 100%;
+			.banner-inner {
+				max-width: 625px;
+				margin: 0 auto;
+				h1 {
+					color: $color-white;
+					text-transform: uppercase;
+					text-align: center;
+					font-size: 3em;
+					font-weight: 700;
+					@media(max-width: $break-small-max) {
+						font-size: 1.4em;
+					}
+				}
+				.link-wrapper {
+					@media(max-width: $break-small-max) {
+						padding: 0 15px;
+					}
+				}
+				a {
+					display: block;
+					width: 250px;
+					height: 50px;
+					display: block;
+					color: #fff;
+					line-height: 50px;
+					text-align: center;
+					font-size: 1.4em;
+					font-weight: 600;
+					background-image: url('images/bgSprite.png');
+					background-repeat: no-repeat;
+					@include border-radius(3px);
+					&.pink-menu {
+						float: left;
+						background-color: $color-pink;
+						background-position: 25px 4px;
+					}
+					&.blue-menu {
+						float: right;
+						background-color: $blue-home-link;
+						background-position: 9px -74px;
+					}
+					@media(max-width: $break-small-max) {
+						width: 140px;
+						font-size: 1em;
+						height: 30px;
+						line-height: 30px;
+						background-size: 30%;
+						&.pink-menu{
+							background-position: 3px 4px;
+						}
+						&.blue-menu{
+							background-position: 2px -28px;
+						}						
+					}
+				}
+			}
+		}
+	}
+	
+}
